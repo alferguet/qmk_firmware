@@ -26,31 +26,27 @@ enum custom_keycodes {
 	RGBRST
 };
 
-enum macro_keycodes {
-	KC_SAMPLEMACRO,
-};
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_QWERTY] = LAYOUT_split_3x6_3( \
 	KC_LBRC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_RBRC,\
 LCTL_T(KC_GRV),    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                        KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, RCTL_T(KC_QUOT),\
 KC_LSPO,    ALT_T(KC_Z),    RALT_T(KC_X),    KC_C,    KC_V,    KC_B,           KC_N,    KC_M, KC_COMM,  RALT_T(KC_DOT), LALT_T(KC_SLSH), KC_RSPC,\
-													GUI_T(KC_TAB), SFT_T(KC_ESC),  LT(1,KC_SPC),     LT(2,KC_BSPC),  RSFT_T(KC_MINS),  GUI_T(KC_DEL) \
+													GUI_T(KC_TAB), LT(1, KC_ESC),  SFT_T(KC_SPC),     RSFT_T(KC_BSPC),  LT(2, KC_MINS),  GUI_T(KC_ENT) \
 
 ),
 
 	[_LOWER] = LAYOUT_split_3x6_3( \
-LGUI(KC_6), LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LGUI(KC_4), LGUI(KC_5),      KC_PGUP ,    KC_HOME ,    KC_VOLU,    XXXXXXX, XXXXXXX, KC_BSPC,\
-			LGUI(KC_ENT), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,             KC_LEFT, KC_DOWN, KC_UP,KC_RIGHT, XXXXXXX, XXXXXXX,\
-			XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                  KC_PGDN    , KC_END,   KC_VOLD,XXXXXXX, XXXXXXX, XXXXXXX,\
-																					XXXXXXX,   XXXXXXX,  XXXXXXX,     KC_ENT,   XXXXXXX, MO(3) \
+LGUI(KC_6), LGUI(KC_1), LGUI(KC_2), LGUI(KC_3), LGUI(KC_4), LGUI(KC_5),      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,\
+			LGUI(KC_ENT), KC_MS_BTN1, KC_MS_BTN2, KC_MS_BTN3, KC_HOME, KC_PGUP,   KC_LEFT, KC_DOWN, KC_UP,KC_RIGHT, XXXXXXX, XXXXXXX,\
+			XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_END, KC_PGDN,                  KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, XXXXXXX, XXXXXXX,\
+																					XXXXXXX,   XXXXXXX,  XXXXXXX,     XXXXXXX,  KC_DEL , MO(3) \
 	),
 
 	[_RAISE] = LAYOUT_split_3x6_3( \
 		KC_PIPE, KC_EXLM, KC_AT, KC_HASH, KC_DLR,  KC_PERC,                  KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSLS, \
-		KC_DOT,  KC_1,    KC_2,  KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_EQL, \
+		KC_MINS,  KC_1,    KC_2,  KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_EQL, \
 		KC_F12,  KC_F1,   KC_F2, KC_F3,   KC_F4,   KC_F5,                    KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  \
-																					MO(3), _______, KC_ENT, _______, _______, _______ \
+																					MO(3), KC_DEL, _______, _______, _______, _______ \
 		),
 
 	[_ADJUST] = LAYOUT_split_3x6_3( \
