@@ -25,8 +25,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Select hand configuration */
 
  
-#define MASTER_LEFT
-// #define MASTER_RIGHT
+
+// #define MASTER_LEFT
+#define MASTER_RIGHT
 // #define EE_HANDS
 
 
@@ -36,4 +37,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define IGNORE_MOD_TAP_INTERRUPT
 
-#define TAPPING_TERM 150
+#define TAPPING_TERM 145
